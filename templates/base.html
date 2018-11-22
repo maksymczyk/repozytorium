@@ -1,0 +1,45 @@
+{% load static %}
+<html lang="pl">
+
+<head>
+  <title>Page</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'page.css' %}">
+</head>
+<header>
+  <a href="{% url 'home' %}">Home</a> | <a href="{% url 'about' %}">About</a> | <a href="{% url 'gallery' %}">Gallery</a>
+</header>
+
+<body>
+  <div id="container">
+    <div id="top">
+      <h2></h2>
+    </div>
+  <div id="leftnav">
+    <p>
+      <em>SPIS TREŚCI:</em>
+    </p>
+    <ol>
+      <li><a href="http://maksymczyk.cba.pl/charakterystyka.html">Charakterystyka grafik rastrowych</a></li>
+      <li><a href="http://maksymczyk.cba.pl/jakosc.html">Jakość obrazu a wielkość pliku</a></li>
+      <li><a href="http://maksymczyk.cba.pl/rozmiary.html">Rozmiary i rozdzielczość</a></li>
+    </ol>
+  </div>
+  <div id="content">
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </div>
+  <div id="rightnav">
+      <p><strong>Źródło informacji :</strong><a href="http://maksymczyk.cba.pl/index.html">Grafika rastrowa</a></p>
+  </div>
+  <div id="footer">
+  </div>
+  </div>
+
+</body>
+
+</html>

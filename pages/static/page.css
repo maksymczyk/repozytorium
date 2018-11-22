@@ -1,0 +1,75 @@
+#container {
+  width: 90%;
+  margin: 10px auto;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid black;
+  line-height: 130%;
+}
+
+/*komentarz*/
+#body {
+  display: block;
+  margin: 8px;
+}
+
+#top {
+  padding: 10px;
+  background-color: #36ABD9;
+  border-bottom: 1px solid black;
+}
+
+#top h2 {
+  padding: 100px;
+  margin: 0.5px;
+  background-color: #36ABD9;
+  color: #36ABD9;
+  font-size: 30px;
+  background-image: url('https://www.backpacker.com/.image/t_share/MTQ2OTc1NDIzNjk0MTg2NDIw/bp0517driveless_johnfowler_sandiacrest1500x500.jpg');
+  background-repeat: no-repeat;
+}
+
+#leftnav {
+  float: left;
+  width: 17%;
+  margin: 0;
+  padding: 10px;
+}
+
+#rightnav {
+  float: left;
+  width: 17%;
+  margin: 0;
+  padding: 10px;
+}
+
+#content {
+  width: 57%;
+  float: left;
+  margin: 10px auto;
+  padding: 13px;
+  background-color: #fff;
+  color: #504747;
+  font-family: Open Sans Condensed;
+  font-size: 14px;
+  border: 1px solid black;
+  line-height: 190%;
+}
+
+#footer {
+  clear: both;
+  margin: 0;
+  padding: 10px;
+  color: #333;
+  background-color: #36ABD9;
+  border-top: 1px solid black;
+}
+
+/*komentarz*/
+#leftnav p, #rightnav p {
+  margin: 0 0 1em 0;
+}
+
+#content h2 {
+  margin: 0 0 .5em 0;
+}
