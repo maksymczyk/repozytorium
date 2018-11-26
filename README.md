@@ -1,2 +1,2 @@
 # repozytorium
-po co ja studiuje
+po co ja studiuję
