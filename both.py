@@ -47,9 +47,16 @@ ludzie= pd.Series([wzmiennaCzarni , wzmiennaBiali])
 stdzmiennaCzarni= pd.Series(zmiennaCzarni).std()
 stdzmiennaBiali= pd.Series(zmiennaBiali).std()
 stdludzie = pd.Series([ stdzmiennaCzarni, stdzmiennaBiali])
-plt.bar(range(len(ludzie)), ludzie, color='g', label="odsetek osób, które kiedykolwiek były w związku małżeńskim" , yerr=stdludzie , width=0.5, align='center')
+plt.bar(range(len(ludzie)), ludzie, color='g', label="odsetek małżeństw" , yerr=stdludzie , width=0.5, align='center')
 plt.xticks(range(len(ludzie)) , ['osoby czarnoskóre', 'osoby białoskóre'])
-plt.ylabel("odsetek osób, które kiedykolwiek były w związku małżeńskim")
+plt.ylabel("odsetek małżeństw")
 plt.show()
 
 #wykres wskażników opisujących jak zmieniała sie liczba małżeństw na przestrzeni lat 1960-2012
+
+lzmiennaWszyscy=pd.Series(zmiennaWszyscy)
+plt.plot(lzmiennaWszyscy, label="odsetek małżeństw")
+plt.legend()
+plt.xlabel("lata")
+plt.ylabel("odsetek małżeństw")
+plt.show()
