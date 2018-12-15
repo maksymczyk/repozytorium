@@ -1,2 +1,2 @@
 # repozytorium
-po co ja studiuję
+po co ja żyję
