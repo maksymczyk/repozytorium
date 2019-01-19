@@ -55,41 +55,27 @@ stdludzie = pd.Series([ stdzmiennaCzarni, stdzmiennaBiali])
 plt.bar(range(len(ludzie)), ludzie, color='g', label="odsetek małżeństw" , yerr=stdludzie , width=0.5, align='center')
 plt.xticks(range(len(ludzie)) , ['osoby czarnoskóre', 'osoby białoskóre'])
 ax = plt.gca()
-ax.tick_params(labelsize = 14)
-plt.ylabel("odsetek małżeństw [%]", size=14)
+plt.ylabel("odsetek małżeństw")
 plt.show()
-
-#test t dla wszystkich
-
-true_mu = 0
-testt1 = scipy.stats.ttest_1samp(zmiennaWszyscy, true_mu)
-print(testt1)
 
 #wykres wskażników opisujących jak zmieniała sie liczba małżeństw na przestrzeni lat 1960-2012
 
 lzmiennaWszyscy=pd.Series(zmiennaWszyscy)
 lzmiennaWszyscy=lzmiennaWszyscy*100
-plt.plot(lzmiennaWszyscy, label="odsetek małżeństw")
-plt.legend()
-plt.xlabel("lata")
+plt.plot(lzmiennaWszyscy)
+plt.xlabel("rok")
 plt.ylabel("odsetek małżeństw [%]")
-y_pos = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17] # Układa kolumny w równych odstępach
+y_pos = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16] # Układa kolumny w równych odstępach
 plt.xticks(y_pos, zmiennaRok, rotation = 'vertical')
 plt.show()
-
-#test t da bezdzietnych
-
-testt2 = scipy.stats.ttest_1samp(zmiennaBrakdzieci, true_mu)
-print(testt2)
 
 #wykres wskażników opisujących jak zmieniała sie liczba małżeństw bezdzietnych na przestrzeni lat 1960-2012
 
 lzmiennaBrakdzieci=pd.Series(zmiennaBrakdzieci)
 lzmiennaBrakdzieci=lzmiennaBrakdzieci*100
-plt.plot(lzmiennaBrakdzieci, label="odsetek małżeństw bezdzietnych")
-plt.legend()
-plt.xlabel("lata")
+plt.plot(lzmiennaBrakdzieci)
+plt.xlabel("rok")
 plt.ylabel("odsetek małżeństw bezdzietnych [%]")
-y_pos2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+y_pos2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 plt.xticks(y_pos2, zmiennaRok, rotation = 'vertical')
 plt.show()
